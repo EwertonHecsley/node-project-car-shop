@@ -6,7 +6,13 @@ class CarController {
         const car = new CarService();
         const result = await car.create(req.body);
         return res.status(201).json(result)
-    }
+    };
+
+    async findAllCars(_req: Request, res: Response) {
+        const car = new CarService();
+        const result = await car.findAllCars();
+        return res.json(result);
+    };
 };
 
 export default CarController;

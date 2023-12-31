@@ -7,6 +7,11 @@ class CarService {
         const result = await car.create(carData);
         return result;
     };
+
+    async findAllCars() {
+        const car = new CarModel();
+        return await car.findAllCars();
+    };
 };
 
 export default CarService;
